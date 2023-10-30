@@ -1,27 +1,34 @@
 <!-- para que se pueda ver la pagina en el servidor local se debe de poner en la url localhost/Proyecto/index.php -->
-<?php include("db.php")?>
+<?php include("db.php") ?>
+<?php include("includes/header.php") ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP MySql CRUD</title>
-    <!-- Bootstrap 5.0.2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-    
 <h1>Hello Word</h1>
+<h2>bienvenido</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+            <div class="card card-body">
+                <form action="save_task.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="title"  class="form-control" placeholder="Task title" autofocus>
+                    </div>
 
+                    <div class="form-group">
+                        <textarea name = "description" rows="2" class="form-control" placeholder="Task description"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-success btn-block" name="save_task" value="Save Task">
+                </form>
 
+            </div>
 
+        </div>
 
-</body>
-</html>
+        <div class="col-md-8">
+
+        </div>
+    </div>
+</div>
+
+<?php include("includes/footer.php") ?>
